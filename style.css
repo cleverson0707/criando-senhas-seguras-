@@ -1,0 +1,269 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E TEMA ESCURO
+   ========================================================================== */
+body {
+  background-color: #0f0f1a;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.app-container {
+  background-color: #16162a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid #2a2a44;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #8a8ab0;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* ==========================================================================
+   VISUALIZAÇÃO DA SENHA E CONVERSÃO VISUAL
+   ========================================================================== */
+.display-container {
+  background-color: #0f0f1a;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #333355;
+}
+
+#campo-senha {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  word-break: break-all;
+  user-select: all;
+  color: #00ff66;
+}
+
+.senha-oculta {
+  -webkit-text-security: disc;
+}
+
+#btn-revelar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* ==========================================================================
+   BOTÕES DE AÇÃO E SELETORES
+   ========================================================================== */
+.acoes-container {
+  margin-bottom: 20px;
+}
+
+.btn-secundario {
+  width: 100%;
+  background-color: #252542;
+  color: #ffffff;
+  border: 1px solid #3d3d66;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn-secundario:hover {
+  background-color: #313157;
+}
+
+.controle-tamanho {
+  margin-bottom: 20px;
+}
+
+.contador-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+.btn-contador {
+  background-color: #313157;
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#contador-numero {
+  font-size: 18px;
+  font-weight: bold;
+  width: 30px;
+  text-align: center;
+}
+
+.aviso-erro {
+  color: #ff007f;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ==========================================================================
+   CHECKBOXES
+   ========================================================================== */
+.opcoes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.opcao-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.opcao-checkbox input {
+  cursor: pointer;
+  accent-color: #00ff66;
+}
+
+.destaque-label {
+  color: #bfa3ff;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   BARRA DE FORÇA DA SENHA (CYBERPUNK)
+   ========================================================================== */
+.container-forca {
+  margin-bottom: 25px;
+}
+
+.texto-forca {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.barra-forca-fundo {
+  width: 100%;
+  height: 10px;
+  background-color: #252542;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#barra-forca-progresso {
+  height: 100%;
+  width: 0%;
+  transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+/* Dinâmica de Cores da Barra */
+.fraca {
+  width: 33% !important;
+  background-color: #ff007f;
+  box-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
+}
+
+.media {
+  width: 66% !important;
+  background-color: #9d4edd;
+  box-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
+}
+
+.forte {
+  width: 100% !important;
+  background-color: #00ff66;
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.5);
+}
+
+/* ==========================================================================
+   BOTÃO PRINCIPAL E DISABILIDADE
+   ========================================================================== */
+.btn-principal {
+  width: 100%;
+  background-color: #00ff66;
+  color: #121212;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-principal:hover:not(:disabled) {
+  box-shadow: 0 0 15px #00ff66;
+  transform: scale(1.02);
+}
+
+.btn-principal:disabled {
+  background-color: #444455 !important;
+  color: #888899 !important;
+  cursor: not-allowed;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* ==========================================================================
+   HISTÓRICO
+   ========================================================================== */
+.historico-container {
+  margin-top: 25px;
+  border-top: 1px solid #2a2a44;
+  padding-top: 15px;
+}
+
+.historico-container h3 {
+  font-size: 14px;
+  color: #8a8ab0;
+  margin-bottom: 10px;
+}
+
+#lista-historico {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#lista-historico li {
+  font-family: monospace;
+  background-color: #0f0f1a;
+  padding: 6px 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #a0a0c0;
+  word-break: break-all;
+}
