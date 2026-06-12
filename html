@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Senhas Pro - Alta Entropia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <h1>🔒 Gerador de Senhas Pro</h1>
+    <p class="subtitle">Crie senhas seguras e invioláveis contra supercomputadores.</p>
+
+    <!-- Área de Exibição da Senha -->
+    <div class="display-container">
+      <span id="campo-senha" class="senha-oculta">Clique em Gerar</span>
+      <button id="btn-revelar" title="Exibir/Ocultar">👁️</button>
+    </div>
+
+    <!-- Botões de Ação Rápida -->
+    <div class="acoes-container">
+      <button id="btn-copiar" class="btn-secundario">Copiar Senha</button>
+    </div>
+
+    <!-- Seção de Customização de Tamanho -->
+    <div class="controle-tamanho">
+      <label>Quantidade de caracteres:</label>
+      <div class="contador-container">
+        <button id="btn-menos" class="btn-contador">—</button>
+        <span id="contador-numero">8</span>
+        <button id="btn-mais" class="btn-contador">+</button>
+      </div>
+      <p id="aviso-tamanho" class="aviso-erro hidden">Mínimo de 6 caracteres necessário!</p>
+    </div>
+
+    <!-- Opções de Complexidade -->
+    <div class="opcoes-container">
+      <div class="opcao-checkbox">
+        <input type="checkbox" id="chk-maiusculas" checked>
+        <label for="chk-maiusculas">Letras Maiúsculas (A-Z)</label>
+      </div>
+      <div class="opcao-checkbox">
+        <input type="checkbox" id="chk-minusculas" checked>
+        <label for="chk-minusculas">Letras Minúsculas (a-z)</label>
+      </div>
+      <div class="opcao-checkbox">
+        <input type="checkbox" id="chk-numeros" checked>
+        <label for="chk-numeros">Números (0-9)</label>
+      </div>
+      <div class="opcao-checkbox">
+        <input type="checkbox" id="chk-especiais-comuns" checked>
+        <label for="chk-especiais-comuns">Símbolos Comuns (!, @, #, $, *)</label>
+      </div>
+      <div class="opcao-checkbox">
+        <input type="checkbox" id="chk-especiais-raros">
+        <label for="chk-especiais-raros">Símbolos Avançados ({}, [], &lt;&gt;)</label>
+      </div>
+      <div class="opcao-checkbox">
+        <input type="checkbox" id="chk-espacos">
+        <label for="chk-espacos">Incluir Espaços (Frases de senha)</label>
+      </div>
+      <div class="opcao-checkbox">
+        <input type="checkbox" id="chk-unicode">
+        <label for="chk-unicode">Incluir Emojis (🚀, 🔒, ★)</label>
+      </div>
+      <div class="opcao-checkbox">
+        <input type="checkbox" id="chk-criptografia">
+        <label for="chk-criptografia" class="destaque-label">Simular Criptografia (Hash SHA-256)</label>
+      </div>
+    </div>
+
+    <!-- Indicador de Força (Estilo Cyberpunk) -->
+    <div class="container-forca">
+      <p id="texto-forca" class="texto-forca">Segurança: ---</p>
+      <div class="barra-forca-fundo">
+        <div id="barra-forca-progresso"></div>
+      </div>
+    </div>
+
+    <!-- Botão Principal de Ação -->
+    <button id="btn-gerar" class="btn-principal">Gerar Senha</button>
+
+    <!-- Histórico de Senhas -->
+    <div class="historico-container">
+      <h3>Últimas senhas geradas:</h3>
+      <ul id="lista-historico"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
